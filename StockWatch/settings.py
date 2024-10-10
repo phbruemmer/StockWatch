@@ -37,6 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'settings',
+    'main',
+    'login'
 ]
 
 MIDDLEWARE = [
@@ -54,7 +57,11 @@ ROOT_URLCONF = 'StockWatch.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            BASE_DIR / 'login/login_templates',
+            BASE_DIR / 'main/main_templates',
+            BASE_DIR / 'settings/settings_templates'
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
