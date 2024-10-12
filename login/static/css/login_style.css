@@ -28,3 +28,31 @@ body {
   color: var(--primary_text);
   overflow-x: hidden;
 }
+
+/* default styling */
+
+button {
+  background-color: var(--special_dark);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--special);
+}
+
+button:focus {
+  outline: none;
+  box-shadow: 0 0 5px 2px rgba(0, 123, 255, 0.5);
+}
+
+button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+  opacity: 0.65;
+}
