@@ -8,7 +8,7 @@
   --primary_text: #7b9cc4;
 }
 
-/* default setting */
+/* default web-page setting */
 
 * {
   margin: 0;
@@ -27,27 +27,4 @@ body {
   background-color: var(--background);
   color: var(--primary_text);
   overflow-x: hidden;
-}
-
-/* default styling */
-
-button {
-  background-color: var(--special_dark);
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  font-size: 16px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-button:hover {
-  background-color: var(--special);
-}
-
-button:disabled {
-  background-color: #cccccc;
-  cursor: not-allowed;
-  opacity: 0.65;
 }
