@@ -25,11 +25,18 @@ body {
   line-height: 1.6;
   font-family: "Arial", sans-serif;
   background-color: var(--background);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   color: var(--primary_text);
   overflow-x: hidden;
 }
 
 /* default styling */
+
+h1 {
+  font-size: 64px;
+}
 
 button {
   background-color: var(--special_dark);
@@ -50,4 +57,32 @@ button:disabled {
   background-color: #cccccc;
   cursor: not-allowed;
   opacity: 0.65;
+}
+
+.special {
+  color: var(--special);
+}
+
+/* Page styling */
+
+#overview {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--secondary);
+  margin: 20vh 40vh;
+  padding: 60px;
+  border-radius: 20px 120px;
+  opacity: 80%;
+}
+
+#overview #start-btn-collection {
+  margin: 40px;
+}
+
+#overview #start-btn-collection button {
+  margin: 10px;
+  padding: 15px 30px;
+  font-size: 20px;
 }
