@@ -8,8 +8,10 @@ def index(requests):
         email = requests.POST.get('email')
         password = requests.POST.get('password')
         password = hashlib.sha256(password.encode()).hexdigest()
+        user_id = User.objects.get(email=email).id()
+        if password == User.objects.get(id=user_id).password():
+            print("success!")
         print(email)
         print(password)
-        print(User.objects.all())
 
     return render(requests, 'login_index.html')
