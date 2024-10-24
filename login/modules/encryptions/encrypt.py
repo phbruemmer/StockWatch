@@ -1,14 +1,20 @@
+import base64
+import os
+
+
 class EncryptionSystem:
     def __init__(self, username, email):
         self.username = username
         self.email = email
+        self.private_key = base64.urlsafe_b64encode(os.urandom(32))
+
+    def generate_private_key(self):
+        self.private_key = base64.urlsafe_b64encode(os.urandom(32))
 
     def encrypt_username(self):
-        username_len = len(self.username)
-        for i in range(0, username_len):
-            print(self.username[i])
+        pass
 
 
 if __name__ == "__main__":
-    es = EncryptionSystem(username="Robert", email="Robert@Robert.Robert")
-    es.encrypt_username()
+    es = EncryptionSystem(username="Test", email="Robert@Robert.Robert")
+    print(es.private_key)
