@@ -23,7 +23,7 @@ def register(request):
         username = request.POST.get('username')
         password = request.POST.get('password')
         password = hashlib.sha256()
-    return render(request, 'login_index.html')
+    return render(request, 'register_index.html')
 
 
 
