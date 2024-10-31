@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>start</title>
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/login_style.css' %}" />
+  </head>
+    {% block content %}
+  <body style="background-image: url('{% static 'images/StarShip.jpeg' %}')">
+    <div id="overview">
+      <h1>Welcome to <span class="special">name</span>!</h1>
+      <div id="start-btn-collection">
+        <button>overview</button>
+        <button onClick="document.getElementById('login').scrollIntoView();">
+          login
+        </button>
+        <button>contributors</button>
+      </div>
+    </div>
+      {% endblock %}
+  </body>
+</html>
