@@ -21,8 +21,11 @@ def register(request):
     if request.method == 'POST':
         email = request.POST.get('email')
         username = request.POST.get('username')
-        password = request.POST.get('password')
-        password = hashlib.sha256()
+        pw_1 = request.POST.get('pw_1')
+        pw_2 = request.POST.get('pw_2')
+        if pw_1 == pw_2:
+            pw_1 = hashlib.sha256()
+
     return render(request, 'register_index.html')
 
 
